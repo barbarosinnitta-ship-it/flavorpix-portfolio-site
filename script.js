@@ -10,7 +10,15 @@
 */
 const images = [
   // starter sample (transparent placeholder). Replace with Cloudinary URLs.
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/640px-PNG_transparency_demonstration_1.png"
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_2652_xfs2ot.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_0887_glzuid.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735001/DSC_1004_oreprt.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735000/DSC_2940_arwjvl.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_3220_skoex3.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_1009_cpkje7.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734994/DSC_3433_ywavt3.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735547/DSC_1486_ghvjmt.jpg",
+  "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735553/DSC_1536_ajawaa.jpg"
 ];
 
 /* ---------- 2) Build gallery cards from the array ---------- */
