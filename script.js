@@ -8,8 +8,7 @@
  Replace the sample URL(s) with your Cloudinary "secure" image links.
  Example Cloudinary URL format: https://res.cloudinary.com/<cloud-name>/image/upload/v12345678/yourfile.jpg
 */
-const images = [
-  // starter sample (transparent placeholder). Replace with Cloudinary URLs.
+const IMAGES = [
   "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_2652_xfs2ot.jpg",
   "https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_0887_glzuid.jpg",
   "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735001/DSC_1004_oreprt.jpg",
@@ -20,6 +19,7 @@ const images = [
   "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735547/DSC_1486_ghvjmt.jpg",
   "https://res.cloudinary.com/dk2motd7g/image/upload/v1762735553/DSC_1536_ajawaa.jpg"
 ];
+
 
 /* ---------- 2) Build gallery cards from the array ---------- */
 function buildGallery() {
