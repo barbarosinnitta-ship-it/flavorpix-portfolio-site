@@ -1,75 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flavorpix | Food Photography</title>
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
-</head>
-<body>
-
-<header class="site-header">
-  <div class="brand">FLAVORPIX</div>
-
-  <div class="themes">
-    <button class="active">Portfolio</button>
-    <button onclick="location.href='about.html'">About</button>
-  </div>
-</header>
-
-<section id="home" class="hero" style="
-  background-image: url('https://res.cloudinary.com/dk2motd7g/image/upload/v1762734999/DSC_2652_xfs2ot.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px 50px;
-  border-radius: 0;
-">
-  <div class="hero-inner" style="
-    background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.0) 50%);
-    padding: 28px;
-    border-radius: 8px;
-    max-width: 900px;
-  ">
-    <h1 class="hero-title" style="
-      color:#fff;
-      font-size:56px;
-      margin:0;
-      font-weight:700;
-      letter-spacing:2px;
-    ">FLAVORPIX</h1>
-
-    <p class="hero-sub" style="color:rgba(255,255,255,0.9); margin:6px 0 0;">
-      Cupcakes • Cookies • Seasonal • Drinks
-    </p>
-  </div>
-
-  <div class="masonry-preview" id="masonryPreview"></div>
-</section>
-
-
-<section class="gallery">
-
-  <!-- ✅ Replace ONLY these Cloudinary URLs later -->
-  <div class="card">
-    <a class="img-link" href="#">
-      <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/640px-PNG_transparency_demonstration_1.png">
-    </a>
-    <div class="meta">
-      <h3 class="title">Sample Image</h3>
-      <p class="caption">Once you upload to Cloudinary, we will replace these.</p>
-    </div>
-  </div>
-
-</section>
-
-<footer class="site-footer">
-  © 2025 Flavorpix · All rights reserved.
-</footer>
-
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flavorpix | Food Photography</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
