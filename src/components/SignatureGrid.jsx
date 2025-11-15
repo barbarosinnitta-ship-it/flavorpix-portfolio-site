@@ -1,3 +1,4 @@
+import React from 'react';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
 function SignatureGrid({ images = [], id }) {
