@@ -1,11 +1,11 @@
 export const folderConfig = {
   home: [
-    'Home/DSC_3220_lylclt',
-    'Home/DSC_3586_m8k3pk',
-    'Home/DSC_1000_bwjts5',
-    'Home/IMG_9709_xpy4sm',
-    'Home/IMG_9736_wtj6jb',
-    'Home/DSC_2258_i2ai7h',
+    'DSC_3220_lylclt',
+    'DSC_3586_m8k3pk',
+    'DSC_1000_bwjts5',
+    'IMG_9709_xpy4sm',
+    'IMG_9736_wtj6jb',
+    'DSC_2258_i2ai7h',
   ],
 
   about: [
@@ -43,7 +43,6 @@ export const folderConfig = {
     ],
   },
 };
-
 
 const baseTransformations = ['f_auto', 'q_auto'];
 
