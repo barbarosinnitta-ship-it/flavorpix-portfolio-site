@@ -36,24 +36,28 @@ export const folderConfig = {
   },
 };
 
-const baseTransformations = ['f_auto', 'q_auto'];
+/* ------------------------------
+   CLOUDINARY HELPERS
+------------------------------ */
 
-export function buildCloudinaryUrl(publicId, options = {}) {
-  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || 'demo';
-  const transforms = [...baseTransformations];
+const CLOUDINARY_CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
 
-  if (options.width) transforms.push(`w_${options.width}`);
-  if (options.height) transforms.push(`h_${options.height}`);
-  if (options.crop) transforms.push(`c_${options.crop}`);
-  if (options.gravity) transforms.push(`g_${options.gravity}`);
-  if (options.effect) transforms.push(`e_${options.effect}`);
-
-  const transformationString = transforms.join(',');
-  return `https://res.cloudinary.com/${cloudName}/image/upload/${transformationString}/${publicId}`;
+/**
+ * Convert a Cloudinary public ID into a full URL.
+ * Applies automatic format + quality for performance.
+ */
+export function buildCloudinaryUrl(publicId, transformations = 'f_auto,q_auto') {
+  if (!publicId || !CLOUDINARY_CLOUD_NAME) return '';
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transformations}/${publicId}`;
 }
 
+/**
+ * Return an array of public IDs from a folder (array).
+ */
 export function getImagesFromFolder(folder, limit) {
-  const images = Array.isArray(folder) ? folder : [];
-  if (!limit) return images;
-  return images.slice(0, limit);
+  if (!folder) return [];
+
+  const list = Array.isArray(folder) ? folder : [];
+  return typeof limit === 'number' ? list.slice(0, limit) : list;
 }
+
