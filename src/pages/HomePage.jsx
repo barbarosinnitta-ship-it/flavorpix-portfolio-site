@@ -1,3 +1,4 @@
+import React from 'react';
 import Hero from '../components/Hero.jsx';
 import SignatureGrid from '../components/SignatureGrid.jsx';
 import AboutTeaser from '../components/AboutTeaser.jsx';
