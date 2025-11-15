@@ -1,37 +1,45 @@
 export const folderConfig = {
   home: [
-    'Home/DSC_2652_xfs2ot',
-    'Home/DSC_0887_glzuid',
-    'Home/DSC_1004_oreprt',
-    'Home/DSC_2940_arwjvl',
-    'Home/DSC_3220_skoex3',
-    'Home/DSC_1009_cpkje7',
-    'Home/DSC_3433_ywavt3',
+    'Home/DSC_3220_lylclt',
+    'Home/DSC_3586_m8k3pk',
+    'Home/DSC_1000_bwjts5',
+    'Home/IMG_9709_xpy4sm',
+    'Home/IMG_9736_wtj6jb',
+    'Home/DSC_2258_i2ai7h',
   ],
-  about: ['about me/DSC_1536_ajawaa', 'about me/DSC_1486_ghvjmt'],
-  cupcakes: [
-    'Cupcakes/DSC_4011_cupcakes',
-    'Cupcakes/DSC_4012_cupcakes',
-    'Cupcakes/DSC_4013_cupcakes',
+
+  about: [
+    'about me/nz1CF698_jingad',
   ],
+
+  Cupcakes: [
+    'Cupcakes/DSC_3437_bjhyel',
+    'Cupcakes/DSC_1114_upsnaw',
+    'Cupcakes/DSC_0880_xyfxcv',
+  ],
+
   cookies: [
-    'cookies/DSC_5100_cookie',
-    'cookies/DSC_5101_cookie',
-    'cookies/DSC_5102_cookie',
+    'cookies/DSC_1000_ksvham',
+    'cookies/DSC_1146_agghlt',
+    'cookies/DSC_2988_vkwoiy',
   ],
-  drinks: [
-    'Drinks/DSC_2940_arwjvl',
-    'Drinks/DSC_3220_skoex3',
-    'Drinks/DSC_1536_ajawaa',
+
+  Drinks: [
+    'Drinks/DSC_2466_wwcc89',
+    'Drinks/DSC_2652_c1bfdi',
+    'Drinks/DSC_2444_ntfkyz',
   ],
-  holiday: {
-    christmas: [
-      'Holiday/christmas/DSC_2652_xfs2ot',
-      'Holiday/christmas/DSC_3433_ywavt3',
+
+  Holiday: {
+    Christmas: [
+      'Holiday/Christmas/DSC_4652_ototnd',
+      'Holiday/Christmas/DSC_3246_funfnp',
+      'Holiday/Christmas/DSC_3117_pwqjvs',
     ],
-    halloween: [
-      'Holiday/halloween/DSC_2001_halloween',
-      'Holiday/halloween/DSC_2002_halloween',
+    Halloween: [
+      'Holiday/Halloween/DSC_2175_od7cww',
+      'Holiday/Halloween/DSC_1951_vwbc1k',
+      'Holiday/Halloween/DSC_1919_bgbt4g',
     ],
   },
 };
