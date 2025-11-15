@@ -9,7 +9,7 @@ export const folderConfig = {
   ],
   
   about: [
-    'about me/nz1CF698_jingad',
+    'nz1CF698_jingad',
   ],
 
   cupcakes: [
