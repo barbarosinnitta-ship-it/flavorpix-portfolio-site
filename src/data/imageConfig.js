@@ -4,7 +4,7 @@ export const folderConfig = {
     'Home/DSC_0887_glzuid',
     'Home/DSC_1004_oreprt',
     'Home/DSC_2940_arwjvl',
-    'Home/DSC_3220_skoex3',
+    'Home/DSC_3220_lylclt',
     'Home/DSC_1009_cpkje7',
     'Home/DSC_3433_ywavt3',
   ],
