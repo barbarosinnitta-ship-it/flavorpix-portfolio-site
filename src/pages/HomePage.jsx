@@ -6,7 +6,9 @@ import CategoryStrip from '../components/CategoryStrip.jsx';
 import { folderConfig, getImagesFromFolder } from '../data/imageConfig.js';
 
 function HomePage() {
-  const heroImages = getImagesFromFolder(folderConfig.home, 6);
+  const homeImages = getImagesFromFolder(folderConfig.home);
+  const heroImage = homeImages[0];
+  const signatureImages = homeImages.length > 1 ? homeImages.slice(1) : homeImages;
   const portraitImage = folderConfig.about?.[0];
 
   const categories = [
@@ -51,10 +53,10 @@ function HomePage() {
         description="Editorial stories of sweets, sips, and seasonal rituals shot in rich natural light."
         ctaLabel="View portfolio"
         ctaHref="#best-of"
-        backgroundImage={heroImages[0]}
+        backgroundImage={heroImage}
       />
 
-      <SignatureGrid id="best-of" images={heroImages} />
+      <SignatureGrid id="best-of" images={signatureImages} />
 
       <AboutTeaser
         portraitId={portraitImage}

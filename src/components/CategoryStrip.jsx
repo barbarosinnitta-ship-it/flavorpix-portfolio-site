@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 

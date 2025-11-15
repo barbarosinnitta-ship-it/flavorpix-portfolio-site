@@ -1,7 +1,8 @@
-import React from 'react';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
 function SignatureGrid({ images = [], id }) {
+  const galleryImages = images.filter(Boolean).slice(0, 6);
+
   return (
     <section className="signature" id={id}>
       <div className="section-heading">
@@ -9,10 +10,15 @@ function SignatureGrid({ images = [], id }) {
         <h2>Six vertical favorites</h2>
       </div>
       <div className="signature__grid">
-        {images.filter(Boolean).slice(0, 6).map((publicId) => (
+        {galleryImages.map((publicId) => (
           <figure key={publicId} className="signature__item">
             <img
-              src={buildCloudinaryUrl(publicId, { width: 900 })}
+              src={buildCloudinaryUrl(publicId, {
+                width: 900,
+                height: 1200,
+                crop: 'fill',
+                gravity: 'auto',
+              })}
               alt="Flavorpix highlight"
               loading="lazy"
             />
