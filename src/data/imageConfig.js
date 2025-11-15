@@ -12,7 +12,7 @@ export const folderConfig = {
     'about me/nz1CF698_jingad',
   ],
 
-  Cupcakes: [
+  cupcakes: [
     'Cupcakes/DSC_3437_bjhyel',
     'Cupcakes/DSC_1114_upsnaw',
     'Cupcakes/DSC_0880_xyfxcv',
@@ -24,25 +24,26 @@ export const folderConfig = {
     'cookies/DSC_2988_vkwoiy',
   ],
 
-  Drinks: [
+  drinks: [
     'Drinks/DSC_2466_wwcc89',
     'Drinks/DSC_2652_c1bfdi',
     'Drinks/DSC_2444_ntfkyz',
   ],
 
-  Holiday: {
-    Christmas: [
+  holiday: {
+    christmas: [
       'Holiday/Christmas/DSC_4652_ototnd',
       'Holiday/Christmas/DSC_3246_funfnp',
       'Holiday/Christmas/DSC_3117_pwqjvs',
     ],
-    Halloween: [
+    halloween: [
       'Holiday/Halloween/DSC_2175_od7cww',
       'Holiday/Halloween/DSC_1951_vwbc1k',
       'Holiday/Halloween/DSC_1919_bgbt4g',
     ],
   },
 };
+
 
 const baseTransformations = ['f_auto', 'q_auto'];
 
