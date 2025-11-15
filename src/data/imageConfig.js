@@ -7,7 +7,7 @@ export const folderConfig = {
     'IMG_9736_wtj6jb',
     'DSC_2258_i2ai7h',
   ],
-
+  
   about: [
     'about me/nz1CF698_jingad',
   ],
