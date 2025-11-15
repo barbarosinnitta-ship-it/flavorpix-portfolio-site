@@ -1,3 +1,4 @@
+import React from 'react';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
 function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage }) {
