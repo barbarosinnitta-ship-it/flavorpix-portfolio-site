@@ -48,9 +48,9 @@ function HomePage() {
   return (
     <div className="page">
       <Hero
-        title="Flavorpix"
-        subtitle="Food through my lens"
-        description="Editorial stories of sweets, sips, and seasonal rituals shot in rich natural light."
+        title="Food through my lens"
+        subtitle="Stories of sweets, sips, and seasonal rituals shot in rich natural light."
+        description="One-woman editorials capturing desserts, drinks, and seasonal rituals in their most intimate light."
         ctaLabel="View portfolio"
         ctaHref="#best-of"
         backgroundImage={heroImage}
@@ -59,13 +59,14 @@ function HomePage() {
       <SignatureGrid id="best-of" images={signatureImages} />
 
       <AboutTeaser
+        id="about"
         portraitId={portraitImage}
         eyebrow="Meet the artist"
         heading="I’m Priya — the eye behind Flavorpix"
         copy="From slow-simmered syrups to hand-piped icing, I document the quiet beauty of desserts in the making."
       />
 
-      <CategoryStrip categories={categories} />
+      <CategoryStrip id="categories" categories={categories} />
     </div>
   );
 }

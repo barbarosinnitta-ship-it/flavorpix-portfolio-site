@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
-function CategoryStrip({ categories = [] }) {
+function CategoryStrip({ categories = [], id }) {
   return (
-    <section className="category-strip">
+    <section className="category-strip" id={id}>
       <div className="section-heading">
         <p className="eyebrow">Explore by craving</p>
         <h2>Categories</h2>
