@@ -16,7 +16,7 @@ function HomePage() {
     {
       key: 'holiday',
       title: 'Holiday',
-      description: 'Christmas sparkle and Halloween drama captured in candlelight.',
+      description: 'Christmas sparkle and Halloween mood',
       to: '/holiday',
       images: [
         ...getImagesFromFolder(folderConfig.holiday?.gallery, 3),
