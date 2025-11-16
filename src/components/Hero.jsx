@@ -1,22 +1,66 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
-function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage }) {
-  const backgroundUrl = backgroundImage
-    ? buildCloudinaryUrl(backgroundImage, {
-        width: 2400,
-        height: 1600,
-        crop: 'fill',
-        gravity: 'auto',
-      })
-    : null;
+const SLIDE_INTERVAL_MS = 1000;
+
+function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage, carouselImages }) {
+  const slides = useMemo(() => {
+    if (Array.isArray(carouselImages) && carouselImages.length > 0) {
+      return carouselImages.map((id) => ({
+        id,
+        url: buildCloudinaryUrl(id, {
+          width: 2400,
+          height: 1600,
+          crop: 'fill',
+          gravity: 'auto',
+        }),
+      }));
+    }
+
+    const fallbackUrl = backgroundImage
+      ? buildCloudinaryUrl(backgroundImage, {
+          width: 2400,
+          height: 1600,
+          crop: 'fill',
+          gravity: 'auto',
+        })
+      : null;
+
+    return fallbackUrl ? [{ id: 'single', url: fallbackUrl }] : [];
+  }, [backgroundImage, carouselImages]);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [slides.length]);
+
+  useEffect(() => {
+    if (slides.length <= 1) return undefined;
+
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, SLIDE_INTERVAL_MS);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
     <header
       id="hero"
       className="hero"
-      style={backgroundUrl ? { backgroundImage: `url(${backgroundUrl})` } : undefined}
     >
+      <div className="hero__slides">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`hero__slide ${index === activeIndex ? 'is-active' : ''}`}
+            style={{ backgroundImage: `url(${slide.url})` }}
+            role="img"
+            aria-label={title}
+          />
+        ))}
+      </div>
       <div className="hero__scrim" />
       <div className="hero__content">
         <p className="eyebrow">Editorial food photography</p>

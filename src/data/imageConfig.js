@@ -7,6 +7,14 @@ export const folderConfig = {
     'IMG_9736_wtj6jb',
     'DSC_2258_i2ai7h',
   ],
+  carousel: [
+    'DSC_1536_mjz6lr',
+    'DSC_1486_blbxb9',
+    'IMG_9736_ekrgyo',
+    '1613036069436_lvaecu',
+    '1611821262111_jgy94k',
+    '1613383208238_1.59.14_PM_edlt5b',
+  ],
   about: ['about me/DSC_1536_ajawaa', 'about me/DSC_1486_ghvjmt'],
   cupcakes: [
     'Cupcakes/DSC_4011_cupcakes',

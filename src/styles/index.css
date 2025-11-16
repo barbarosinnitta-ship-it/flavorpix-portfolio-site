@@ -138,6 +138,24 @@ img {
   background-position: center;
 }
 
+.hero__slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+}
+
 .hero__scrim {
   position: absolute;
   inset: 0;
@@ -152,6 +170,22 @@ img {
   flex-direction: column;
   gap: 1.25rem;
   padding: 0 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: calc(100vh - 72px);
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .hero__content {
+    display: none;
+  }
+
+  .hero__scrim {
+    background: linear-gradient(180deg, rgba(5, 4, 5, 0.4), rgba(5, 4, 5, 0.8));
+  }
 }
 
 .hero h1 {
