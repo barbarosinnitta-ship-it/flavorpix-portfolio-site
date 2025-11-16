@@ -4,10 +4,12 @@ import HomePage from './pages/HomePage.jsx';
 import PlaceholderPage from './pages/PlaceholderPage.jsx';
 import Navbar from './components/Navbar.jsx';
 import AboutPage from './pages/AboutPage.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
