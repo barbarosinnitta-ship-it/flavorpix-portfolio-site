@@ -50,7 +50,7 @@ function HomePage() {
     <div className="page">
       <Hero
         title="Food through my lens"
-        subtitle="Stories of sweets, sips, and seasonal rituals shot in rich natural light."
+        subtitle="Celebrating textures, colors, crumbs, and cozy frames in every shot."
         description="One-woman editorials capturing desserts, drinks, and seasonal rituals in their most intimate light."
         ctaLabel="View portfolio"
         ctaHref="#best-of"
