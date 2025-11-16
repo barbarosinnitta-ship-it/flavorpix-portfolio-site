@@ -15,7 +15,7 @@ export const folderConfig = {
     '1611821262111_jgy94k',
     '1613383208238_1.59.14_PM_edlt5b',
   ],
-  about: ['about me/DSC_1536_ajawaa', 'about me/DSC_1486_ghvjmt'],
+  about: ['nz1CF698_jingad'],
   cupcakes: [
     'Cupcakes/DSC_4011_cupcakes',
     'Cupcakes/DSC_4012_cupcakes',
