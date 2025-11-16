@@ -19,8 +19,7 @@ function HomePage() {
       description: 'Christmas sparkle and Halloween drama captured in candlelight.',
       to: '/holiday',
       images: [
-        ...getImagesFromFolder(folderConfig.holiday?.christmas, 2),
-        ...getImagesFromFolder(folderConfig.holiday?.halloween, 1),
+        ...getImagesFromFolder(folderConfig.holiday?.gallery, 3),
       ],
     },
     {
