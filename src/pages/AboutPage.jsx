@@ -6,25 +6,21 @@ const storySections = [
     text:
       'I completed my MBA and began my career at PwC, excited to dive into the corporate world. But two years in, life took an unexpected turn. I started experiencing sharp pain in the tip of my right index finger, so much that I couldn’t type. Eventually, I had to leave my job to focus on healing.',
     imageId: 'DSC_1527_kpzswn',
-    layout: 'right',
   },
   {
     text:
       'Around the same time, the world slowed down as COVID hit. I was newly married, spending most days at home, and naturally found myself returning to the two things I’ve loved always: baking and photography.',
     imageId: 'DSC_3473-Edit-3_jlwuso',
-    layout: 'left',
   },
   {
     text:
       'I would bake something simple, style it on my kitchen counter, and capture it the way I saw it, warm, cozy, imperfect, real. I began posting these photos on Instagram just for fun, never imagining anything more.',
     imageId: 'DSC_2007_fc4nst',
-    layout: 'bottom',
   },
   {
     text:
       'But slowly, those pictures started reaching people. Bakers, small businesses, and home chefs began reaching out for product photos. What started as a hobby, something that comforted me during a difficult phase, blossomed into Flavorpix, my own food photography journey. Today, I get to share the joy I find in textures, colors, crumbs, and cozy frames. Every photo on this page is a small piece of that journey - Food through my lens.',
     imageId: 'DSC_1551_1.59.15_PM_nm2jtm',
-    layout: 'right',
   },
 ];
 
@@ -48,9 +44,10 @@ function AboutPage() {
             crop: 'fill',
             gravity: 'auto',
           });
+          const layout = index % 2 === 0 ? 'left' : 'right';
 
           return (
-            <article key={section.imageId} className={`about-story__block about-story__block--${section.layout}`}>
+            <article key={section.imageId} className={`about-story__block about-story__block--${layout}`}>
               <div className="about-story__text">
                 <p>{section.text}</p>
               </div>
