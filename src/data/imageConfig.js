@@ -1,12 +1,11 @@
 export const folderConfig = {
   home: [
-    'Home/DSC_2652_xfs2ot',
-    'Home/DSC_0887_glzuid',
-    'Home/DSC_1004_oreprt',
-    'Home/DSC_2940_arwjvl',
-    'Home/DSC_3220_lylclt',
-    'Home/DSC_1009_cpkje7',
-    'Home/DSC_3433_ywavt3',
+    'DSC_3220_lylclt',
+    'DSC_3586_m8k3pk',
+    'DSC_1000_bwjts5',
+    'IMG_9709_xpy4sm',
+    'IMG_9736_wtj6jb',
+    'DSC_2258_i2ai7h',
   ],
   about: ['about me/DSC_1536_ajawaa', 'about me/DSC_1486_ghvjmt'],
   cupcakes: [
@@ -40,15 +39,65 @@ export const folderConfig = {
    CLOUDINARY HELPERS
 ------------------------------ */
 
-const CLOUDINARY_CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const FALLBACK_CLOUDINARY_CLOUD_NAME = 'dk2motd7g';
+const CLOUDINARY_CLOUD_NAME =
+  import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || FALLBACK_CLOUDINARY_CLOUD_NAME;
+
+const TRANSFORMATION_KEY_MAP = {
+  width: 'w',
+  height: 'h',
+  crop: 'c',
+  gravity: 'g',
+  effect: 'e',
+  quality: 'q',
+  format: 'f',
+};
+
+function serializeTransformations(transformations) {
+  if (!transformations) {
+    return 'f_auto,q_auto';
+  }
+
+  if (typeof transformations === 'string') {
+    return transformations;
+  }
+
+  if (typeof transformations === 'object') {
+    const entries = Object.entries(transformations)
+      .filter(([, value]) => value !== undefined && value !== null && value !== '')
+      .map(([key, value]) => {
+        const cldKey = TRANSFORMATION_KEY_MAP[key] || key;
+        return `${cldKey}_${value}`;
+      });
+
+    const baseTransforms = [];
+    if (!('format' in transformations)) {
+      baseTransforms.push('f_auto');
+    }
+    if (!('quality' in transformations)) {
+      baseTransforms.push('q_auto');
+    }
+
+    return [...baseTransforms, ...entries].join(',');
+  }
+
+  return 'f_auto,q_auto';
+}
 
 /**
  * Convert a Cloudinary public ID into a full URL.
  * Applies automatic format + quality for performance.
  */
 export function buildCloudinaryUrl(publicId, transformations = 'f_auto,q_auto') {
-  if (!publicId || !CLOUDINARY_CLOUD_NAME) return '';
-  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transformations}/${publicId}`;
+  if (!publicId) return '';
+
+  if (publicId.startsWith('http')) {
+    return publicId;
+  }
+
+  if (!CLOUDINARY_CLOUD_NAME) return '';
+  const transformationString = serializeTransformations(transformations);
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/${transformationString}/${publicId}`;
 }
 
 /**

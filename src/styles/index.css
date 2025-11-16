@@ -152,35 +152,43 @@ img {
 }
 
 .signature {
-  padding-bottom: 4.5rem;
+  padding: 0 0 4.5rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.signature .section-heading {
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
 }
 
 .signature__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
 }
 
 .signature__item {
   position: relative;
   aspect-ratio: 3 / 4;
-  border-radius: 1.25rem;
   overflow: hidden;
   cursor: pointer;
+  margin: 0;
 }
 
 .signature__item img {
   height: 100%;
   width: 100%;
-  border-radius: inherit;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-  transition: transform 250ms ease, box-shadow 250ms ease;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 250ms ease;
 }
 
 @media (hover: hover) {
   .signature__item img:hover {
     transform: scale(1.02);
-    box-shadow: 0 35px 65px rgba(0, 0, 0, 0.55);
   }
 }
 
