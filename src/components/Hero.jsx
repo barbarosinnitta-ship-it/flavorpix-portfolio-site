@@ -63,8 +63,7 @@ function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage
       </div>
       <div className="hero__scrim" />
       <div className="hero__content">
-        <p className="eyebrow">Editorial food photography</p>
-        <h1>{title}</h1>
+        <h1 className="hero__title">{title}</h1>
         <p className="hero__subtitle">{subtitle}</p>
         {description && <p className="hero__description">{description}</p>}
         <a className="button" href={ctaHref}>
