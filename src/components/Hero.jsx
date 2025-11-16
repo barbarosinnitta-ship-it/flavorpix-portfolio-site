@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
-const SLIDE_INTERVAL_MS = 1000;
+const SLIDE_INTERVAL_MS = 4000;
 
 function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage, carouselImages }) {
   const slides = useMemo(() => {

@@ -175,16 +175,33 @@ img {
 @media (max-width: 640px) {
   .hero {
     min-height: calc(100vh - 72px);
-    padding: 0;
+    padding: 1.5rem;
     margin-bottom: 3rem;
+    align-items: flex-start;
   }
 
   .hero__content {
-    display: none;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: min(75%, 320px);
+    max-width: 360px;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0;
+    align-items: flex-end;
+    text-align: right;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .hero__scrim {
-    background: linear-gradient(180deg, rgba(5, 4, 5, 0.4), rgba(5, 4, 5, 0.8));
+    background: linear-gradient(180deg, rgba(5, 4, 5, 0.35), rgba(5, 4, 5, 0.75));
+  }
+
+  .hero__description {
+    margin-bottom: 0.5rem;
   }
 }
 
