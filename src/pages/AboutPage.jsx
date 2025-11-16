@@ -22,7 +22,7 @@ const storySections = [
   },
   {
     text:
-      'But slowly, those pictures started reaching people. Bakers, small businesses, and home chefs began reaching out for product photos. What started as a hobby, something that comforted me during a difficult phase, blossomed into Flavorpix, my own food photography journey. Today, I get to share the joy I find in textures, colors, crumbs, and cozy frames. Every photo on this page is a small piece of that journey—food through my lens.',
+      'But slowly, those pictures started reaching people. Bakers, small businesses, and home chefs began reaching out for product photos. What started as a hobby, something that comforted me during a difficult phase, blossomed into Flavorpix, my own food photography journey. Today, I get to share the joy I find in textures, colors, crumbs, and cozy frames. Every photo on this page is a small piece of that journey - Food through my lens.',
     imageId: 'DSC_1551_1.59.15_PM_nm2jtm',
     layout: 'right',
   },
