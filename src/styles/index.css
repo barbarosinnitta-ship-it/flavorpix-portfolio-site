@@ -452,6 +452,67 @@ img {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
+.about-page {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  margin: 0.35rem 0 0.75rem;
+}
+
+.about-hero p {
+  max-width: 58ch;
+}
+
+.about-story {
+  display: grid;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.about-story__block {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.about-story__block img {
+  width: 100%;
+  border-radius: 1.25rem;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.about-story__block--left {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.about-story__block--right {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+.about-story__block--left .about-story__media {
+  order: -1;
+}
+
+.about-story__block--bottom {
+  grid-template-columns: 1fr;
+}
+
+.about-story__text p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
 @media (max-width: 600px) {
   .page {
     padding: 0 1rem 4rem;
@@ -476,6 +537,17 @@ img {
   .about-teaser__portrait,
   .about-teaser__placeholder {
     min-height: 320px;
+  }
+
+  .about-story__block,
+  .about-story__block--left,
+  .about-story__block--right,
+  .about-story__block--bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story__block--left .about-story__media {
+    order: 0;
   }
 }
 

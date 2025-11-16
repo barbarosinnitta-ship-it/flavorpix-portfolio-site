@@ -63,8 +63,8 @@ function HomePage() {
         id="about"
         portraitId={portraitImage}
         eyebrow="Meet the artist"
-        heading="I’m Priya — the eye behind Flavorpix"
-        copy="From slow-simmered syrups to hand-piped icing, I document the quiet beauty of desserts in the making."
+        heading="My food photography story"
+        copy="Peek behind the lens and see how Flavorpix grew from a cozy kitchen ritual into the work I love today."
       />
 
       <CategoryStrip id="categories" categories={categories} />
