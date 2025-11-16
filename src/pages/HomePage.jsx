@@ -8,6 +8,7 @@ import { folderConfig, getImagesFromFolder } from '../data/imageConfig.js';
 function HomePage() {
   const homeImages = getImagesFromFolder(folderConfig.home);
   const heroImage = homeImages[0];
+  const heroCarouselImages = getImagesFromFolder(folderConfig.carousel);
   const signatureImages = homeImages.length > 1 ? homeImages.slice(1) : homeImages;
   const portraitImage = folderConfig.about?.[0];
 
@@ -53,6 +54,7 @@ function HomePage() {
         description="One-woman editorials capturing desserts, drinks, and seasonal rituals in their most intimate light."
         ctaLabel="View portfolio"
         ctaHref="#best-of"
+        carouselImages={heroCarouselImages}
         backgroundImage={heroImage}
       />
 
