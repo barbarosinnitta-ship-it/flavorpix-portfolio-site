@@ -210,7 +210,7 @@ img {
   font-size: clamp(3rem, 8vw, 5rem);
   margin: 0.2rem 0;
   text-align: right;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero__subtitle {
