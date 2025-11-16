@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { buildCloudinaryUrl } from '../data/imageConfig.js';
 
-function AboutTeaser({ portraitId, eyebrow, heading, copy }) {
+function AboutTeaser({ portraitId, eyebrow, heading, copy, id }) {
   const portraitUrl = portraitId
     ? buildCloudinaryUrl(portraitId, {
         width: 900,
@@ -13,7 +13,7 @@ function AboutTeaser({ portraitId, eyebrow, heading, copy }) {
     : null;
 
   return (
-    <section className="about-teaser">
+    <section className="about-teaser" id={id}>
       <Link to="/about" className="about-teaser__card">
         <div className="about-teaser__media">
           {portraitUrl ? (
