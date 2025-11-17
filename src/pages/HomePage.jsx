@@ -25,9 +25,9 @@ function HomePage() {
     {
       key: 'cupcakes',
       title: 'Cupcakes',
-      description: 'Glossy buttercreams, jewel-like sprinkles, and artisan crumbs.',
+      description: 'Bright swirls and soft textures',
       to: '/cupcakes',
-      images: getImagesFromFolder(folderConfig.cupcakes, 3),
+      images: getImagesFromFolder(folderConfig.cupcakes?.gallery, 3),
     },
     {
       key: 'cookies',
