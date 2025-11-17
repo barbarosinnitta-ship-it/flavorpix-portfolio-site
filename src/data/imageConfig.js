@@ -66,9 +66,12 @@ export const folderConfig = {
     'DSC_0398_lcxwbz',
   ],
   drinks: [
-    'Drinks/DSC_2940_arwjvl',
-    'Drinks/DSC_3220_skoex3',
-    'Drinks/DSC_1536_ajawaa',
+    '1612678839601_l1h4gh',
+    'DSC_0263_jpmjnz',
+    'DSC_2466_wwcc89',
+    'DSC_2652_c1bfdi',
+    'DSC_2444_ntfkyz',
+    'DSC_1587_psh5sf',
   ],
   holiday: {
     gallery: [

@@ -39,7 +39,7 @@ function HomePage() {
     {
       key: 'drinks',
       title: 'Drinks',
-      description: 'Velvety pours, sparkling tonics, and moody glassware.',
+      description: 'Seasonal sips, modern tones',
       to: '/drinks',
       images: getImagesFromFolder(folderConfig.drinks, 3),
     },

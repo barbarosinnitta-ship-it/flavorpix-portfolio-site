@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import HolidayPage from './pages/HolidayPage.jsx';
 import CupcakesPage from './pages/CupcakesPage.jsx';
 import CookiesPage from './pages/CookiesPage.jsx';
+import DrinksPage from './pages/DrinksPage.jsx';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/holiday" element={<HolidayPage />} />
         <Route path="/cupcakes" element={<CupcakesPage />} />
         <Route path="/cookies" element={<CookiesPage />} />
-        <Route path="/drinks" element={<PlaceholderPage title="Drinks" />} />
+        <Route path="/drinks" element={<DrinksPage />} />
         <Route path="*" element={<PlaceholderPage title="Page" />} />
       </Routes>
     </>
