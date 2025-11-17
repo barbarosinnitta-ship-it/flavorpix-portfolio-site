@@ -32,7 +32,7 @@ function HomePage() {
     {
       key: 'cookies',
       title: 'Cookies',
-      description: 'Chewy centers, crisp edges, and hand-piped icing flourishes.',
+      description: 'Crumbs, contrast, and clean textures',
       to: '/cookies',
       images: getImagesFromFolder(folderConfig.cookies, 3),
     },
