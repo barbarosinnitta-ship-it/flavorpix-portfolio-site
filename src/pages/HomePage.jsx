@@ -23,15 +23,6 @@ function HomePage() {
 
   const categories = [
     {
-      key: 'holiday',
-      title: 'Holiday',
-      description: 'Christmas sparkle and Halloween mood',
-      to: '/holiday',
-      images: [
-        ...getImagesFromFolder(folderConfig.holiday?.gallery, 3),
-      ],
-    },
-    {
       key: 'cupcakes',
       title: 'Cupcakes',
       description: 'Bright swirls and soft textures',
@@ -44,6 +35,13 @@ function HomePage() {
       description: 'Crumbs, contrast, and clean textures',
       to: '/cookies',
       images: getImagesFromFolder(folderConfig.cookies, 3),
+    },
+    {
+      key: 'holiday',
+      title: 'Holiday',
+      description: 'Christmas sparkle and Halloween mood',
+      to: '/holiday',
+      images: getImagesFromFolder(folderConfig.holiday?.gallery, 3),
     },
     {
       key: 'drinks',
