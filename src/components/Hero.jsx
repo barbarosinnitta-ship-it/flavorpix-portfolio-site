@@ -39,7 +39,7 @@ function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage
     if (slides.length <= 1) return undefined;
 
     const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 0.75) % slides.length);
+      setActiveIndex((prev) => (prev + 1.25) % slides.length);
     }, SLIDE_INTERVAL_MS);
 
     return () => clearInterval(timer);
