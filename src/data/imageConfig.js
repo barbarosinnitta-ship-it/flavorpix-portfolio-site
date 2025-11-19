@@ -8,8 +8,8 @@ export const folderConfig = {
     'DSC_2258_i2ai7h',
   ],
   carousel: [
-    'DSC_3334_hw1wrw',
-    'DSC_2261_axf61u',
+    'DSC_4591_mmyzad',
+    'DSC_3437_bjhyel',
     'DSC_1486_blbxb9',
     'IMG_9736_ekrgyo',
     '1613036069436_lvaecu',
