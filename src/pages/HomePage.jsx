@@ -27,28 +27,28 @@ function HomePage() {
       title: 'Cupcakes',
       description: 'Bright swirls and soft textures',
       to: '/cupcakes',
-      images: getImagesFromFolder(folderConfig.cupcakes?.gallery, 3),
+      images: getImagesFromFolder(folderConfig.cupcakes?.gallery, 9),
     },
     {
       key: 'cookies',
       title: 'Cookies',
       description: 'Crumbs, contrast, and clean textures',
       to: '/cookies',
-      images: getImagesFromFolder(folderConfig.cookies, 3),
+      images: getImagesFromFolder(folderConfig.cookies, 9),
     },
     {
       key: 'holiday',
       title: 'Holiday',
       description: 'Christmas sparkle and Halloween mood',
       to: '/holiday',
-      images: getImagesFromFolder(folderConfig.holiday?.gallery, 3),
+      images: getImagesFromFolder(folderConfig.holiday?.gallery, 9),
     },
     {
       key: 'drinks',
       title: 'Drinks',
       description: 'Seasonal sips, modern tones',
       to: '/drinks',
-      images: getImagesFromFolder(folderConfig.drinks, 3),
+      images: getImagesFromFolder(folderConfig.drinks, 9),
     },
   ];
 
