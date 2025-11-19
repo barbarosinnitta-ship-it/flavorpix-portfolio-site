@@ -9,7 +9,16 @@ function HomePage() {
   const homeImages = getImagesFromFolder(folderConfig.home);
   const heroImage = homeImages[0];
   const heroCarouselImages = getImagesFromFolder(folderConfig.carousel);
-  const signatureImages = homeImages.length > 1 ? homeImages.slice(1) : homeImages;
+  const signatureImages = (() => {
+    const galleryImages = homeImages.slice(1, 7);
+    const missingCount = 6 - galleryImages.length;
+
+    if (missingCount > 0 && heroImage) {
+      return [...galleryImages, ...Array(missingCount).fill(heroImage)];
+    }
+
+    return galleryImages.slice(0, 6);
+  })();
   const portraitImage = folderConfig.about?.[0];
 
   const categories = [
