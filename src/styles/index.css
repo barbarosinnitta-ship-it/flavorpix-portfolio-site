@@ -128,9 +128,9 @@ img {
   margin-right: calc(50% - 50vw);
   padding: clamp(5rem, 8vw, 8rem) 1.25rem clamp(4rem, 6vw, 5rem);
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: right;
   margin-bottom: 4.5rem;
   overflow: hidden;
   background: linear-gradient(130deg, #120f12, #050405);
@@ -170,6 +170,11 @@ img {
   flex-direction: column;
   gap: 1.25rem;
   padding: 0 0.5rem;
+  margin-top: clamp(2rem, 6vw, 3.5rem);
+  margin-right: clamp(1.5rem, 6vw, 3.5rem);
+  margin-left: auto;
+  align-items: flex-end;
+  text-align: right;
 }
 
 @media (max-width: 640px) {
