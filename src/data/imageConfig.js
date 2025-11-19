@@ -1,11 +1,11 @@
 export const folderConfig = {
   home: [
+    'DSC_1000_bwjts5'
     'DSC_3220_lylclt',
-    'DSC_3586_m8k3pk',
-    'DSC_1000_bwjts5',
-    'IMG_9709_xpy4sm',
-    'IMG_9736_wtj6jb',
+    'DSC_4442_hg1ryk',
     'DSC_2258_i2ai7h',
+    'DSC_3586_m8k3pk',
+    'DSC_1072_cl4lun',
   ],
   carousel: [
     'DSC_4591_mmyzad',
