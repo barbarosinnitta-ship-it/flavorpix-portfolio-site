@@ -1,6 +1,6 @@
 export const folderConfig = {
   home: [
-    'DSC_1000_bwjts5'
+    'DSC_1000_bwjts5',
     'DSC_3220_lylclt',
     'DSC_4442_hg1ryk',
     'DSC_2258_i2ai7h',
