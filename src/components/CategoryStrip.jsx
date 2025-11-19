@@ -10,24 +10,28 @@ function CategoryStrip({ categories = [], id }) {
         <h2>Categories</h2>
       </div>
       <div className="category-strip__grid">
-        {categories.map((category) => (
-          <Link to={category.to} key={category.key} className="category-card">
-            <div className="category-card__collage">
-              {category.images.filter(Boolean).slice(0, 3).map((publicId) => (
-                <img
-                  key={publicId}
-                  src={buildCloudinaryUrl(publicId, { width: 500 })}
-                  alt={`${category.title} collage`}
-                  loading="lazy"
-                />
-              ))}
-            </div>
-            <div className="category-card__body">
-              <h3>{category.title}</h3>
-              <p>{category.description}</p>
-            </div>
-          </Link>
-        ))}
+        {categories.map((category) => {
+          const collageImages = category.images.filter(Boolean).slice(0, 9);
+
+          return (
+            <Link to={category.to} key={category.key} className="category-card">
+              <div className="category-card__collage">
+                {collageImages.map((publicId) => (
+                  <img
+                    key={publicId}
+                    src={buildCloudinaryUrl(publicId, { width: 500 })}
+                    alt={`${category.title} collage`}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              <div className="category-card__body">
+                <h3>{category.title}</h3>
+                <p>{category.description}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
