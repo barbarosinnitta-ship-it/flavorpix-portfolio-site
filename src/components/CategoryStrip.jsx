@@ -11,7 +11,12 @@ function CategoryStrip({ categories = [], id }) {
       </div>
       <div className="category-strip__grid">
         {categories.map((category) => {
-          const collageImages = category.images.filter(Boolean).slice(0, 9);
+          const filteredImages = category.images.filter(Boolean);
+          const collageImages = filteredImages.slice(0, 2);
+
+          if (collageImages.length === 1) {
+            collageImages.push(collageImages[0]);
+          }
 
           return (
             <Link to={category.to} key={category.key} className="category-card">
