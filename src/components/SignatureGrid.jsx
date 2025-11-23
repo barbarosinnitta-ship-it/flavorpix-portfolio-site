@@ -7,7 +7,7 @@ function SignatureGrid({ images = [], id }) {
   return (
     <section className="signature" id={id}>
       <div className="section-heading">
-        <p className="eyebrow">Best of the portfolio</p>
+        <p className="eyebrow">Best of the collection</p>
         <h2>Six vertical favorites</h2>
       </div>
       <div className="signature__grid">
