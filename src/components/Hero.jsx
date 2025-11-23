@@ -66,9 +66,11 @@ function Hero({ title, subtitle, description, ctaLabel, ctaHref, backgroundImage
         <h1 className="hero__title">{title}</h1>
         <p className="hero__subtitle">{subtitle}</p>
         {description && <p className="hero__description">{description}</p>}
-        <a className="button" href={ctaHref}>
-          {ctaLabel}
-        </a>
+        {ctaLabel && ctaHref && (
+          <a className="button" href={ctaHref}>
+            {ctaLabel}
+          </a>
+        )}
       </div>
     </header>
   );
