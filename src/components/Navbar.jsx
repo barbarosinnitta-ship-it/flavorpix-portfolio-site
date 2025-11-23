@@ -3,15 +3,24 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
 
-  const links = [
-    { label: 'Portfolio', href: '#best-of' },
-    { label: 'Categories', href: '#categories' },
-    { label: 'My story', href: '#about' },
+  const categoryLinks = [
+    { label: 'Cupcakes', to: '/cupcakes' },
+    { label: 'Cookies', to: '/cookies' },
+    { label: 'Holiday', to: '/holiday' },
+    { label: 'Drinks', to: '/drinks' },
   ];
 
   const toggle = () => setOpen((prev) => !prev);
-  const close = () => setOpen(false);
+  const close = () => {
+    setOpen(false);
+    setCategoriesOpen(false);
+  };
+
+  const toggleCategories = () => setCategoriesOpen((prev) => !prev);
+  const openCategories = () => setCategoriesOpen(true);
+  const closeCategories = () => setCategoriesOpen(false);
 
   return (
     <header className={`navbar ${open ? 'navbar--open' : ''}`}>
@@ -20,11 +29,33 @@ function Navbar() {
           Flavorpix
         </Link>
         <nav className="navbar__links">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={close}>
-              {link.label}
-            </a>
-          ))}
+          <Link to="/" onClick={close}>
+            Home
+          </Link>
+          <div
+            className={`navbar__dropdown ${categoriesOpen ? 'navbar__dropdown--open' : ''}`}
+            onMouseEnter={openCategories}
+            onMouseLeave={closeCategories}
+          >
+            <button
+              type="button"
+              className="navbar__dropdown-toggle"
+              aria-expanded={categoriesOpen}
+              onClick={toggleCategories}
+            >
+              Categories
+            </button>
+            <div className="navbar__dropdown-menu">
+              {categoryLinks.map((link) => (
+                <Link key={link.to} to={link.to} onClick={close}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <Link to="/about" onClick={close}>
+            My story
+          </Link>
         </nav>
         <button
           className="navbar__toggle"
@@ -39,11 +70,20 @@ function Navbar() {
         </button>
       </div>
       <div className="navbar__drawer">
-        {links.map((link) => (
-          <a key={link.href} href={link.href} onClick={close}>
-            {link.label}
-          </a>
-        ))}
+        <Link to="/" onClick={close}>
+          Home
+        </Link>
+        <div className="navbar__drawer-group">
+          <p className="navbar__drawer-label">Categories</p>
+          {categoryLinks.map((link) => (
+            <Link key={link.to} to={link.to} onClick={close}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <Link to="/about" onClick={close}>
+          My story
+        </Link>
       </div>
     </header>
   );
