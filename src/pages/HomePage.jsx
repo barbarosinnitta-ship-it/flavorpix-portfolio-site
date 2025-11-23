@@ -57,8 +57,6 @@ function HomePage() {
       <Hero
         title="Food through my lens"
         subtitle="Celebrating textures, colors, crumbs, and cozy frames in every shot."
-        ctaLabel="View gallery"
-        ctaHref="#best-of"
         carouselImages={heroCarouselImages}
         backgroundImage={heroImage}
       />
