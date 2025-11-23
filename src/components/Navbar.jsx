@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const categoryLinks = [
     { label: 'Cupcakes', to: '/cupcakes' },
@@ -19,8 +20,21 @@ function Navbar() {
   };
 
   const toggleCategories = () => setCategoriesOpen((prev) => !prev);
+
   const openCategories = () => setCategoriesOpen(true);
   const closeCategories = () => setCategoriesOpen(false);
+
+  const handleDropdownBlur = (event) => {
+    if (!dropdownRef.current?.contains(event.relatedTarget)) {
+      closeCategories();
+    }
+  };
+
+  const handleDropdownLeave = (event) => {
+    if (!dropdownRef.current?.contains(event.relatedTarget)) {
+      closeCategories();
+    }
+  };
 
   return (
     <header className={`navbar ${open ? 'navbar--open' : ''}`}>
@@ -35,7 +49,10 @@ function Navbar() {
           <div
             className={`navbar__dropdown ${categoriesOpen ? 'navbar__dropdown--open' : ''}`}
             onMouseEnter={openCategories}
-            onMouseLeave={closeCategories}
+            onMouseLeave={handleDropdownLeave}
+            onBlur={handleDropdownBlur}
+            onFocus={openCategories}
+            ref={dropdownRef}
           >
             <button
               type="button"
