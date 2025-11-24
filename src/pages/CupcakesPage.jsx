@@ -23,7 +23,7 @@ function CupcakesPage() {
       <header className="holiday-hero">
         <p className="eyebrow">Cupcakes</p>
         <h1>Bright swirls and soft textures</h1>
-        <p className="holiday-hero__lead">Bright swirls and soft textures.</p>
+        
       </header>
 
       <section className="holiday-grid">
