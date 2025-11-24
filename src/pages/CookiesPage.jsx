@@ -23,7 +23,7 @@ function CookiesPage() {
       <header className="holiday-hero">
         <p className="eyebrow">Cookies</p>
         <h1>Crumbs, contrast, and clean textures</h1>
-        <p className="holiday-hero__lead">Crumbs, contrast, and clean textures.</p>
+      
       </header>
 
       <section className="holiday-grid">
