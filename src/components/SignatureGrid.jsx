@@ -7,7 +7,7 @@ function SignatureGrid({ images = [], id }) {
   return (
     <section className="signature" id={id}>
       <div className="section-heading">
-        <p className="eyebrow">Six frames where light meets magic</p>
+        <h2 className="eyebrow">Six frames where light meets magic</h2>
       </div>
       <div className="signature__grid">
         {galleryImages.map((publicId) => (
