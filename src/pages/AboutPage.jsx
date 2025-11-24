@@ -31,7 +31,11 @@ function AboutPage() {
         <p className="eyebrow">My food photography story</p>
         <h1>Meet the artist</h1>
         <p>
-           <strong style={{ fontSize: "1.1rem" }}>Sinnitta Anne Barbaro — </strong>
+  <strong style={{ fontSize: "1.6rem", fontWeight: 700 }}>
+    Sinnitta Anne Barbaro
+  </strong>
+</p>
+        <p>
           Food photography found me when life slowed down. Here’s how a quiet season, a kitchen counter, and a
           camera turned into Flavorpix.
         </p>
