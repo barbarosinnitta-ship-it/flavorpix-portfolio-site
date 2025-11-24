@@ -23,7 +23,7 @@ function DrinksPage() {
       <header className="holiday-hero">
         <p className="eyebrow">Drinks</p>
         <h1>Seasonal sips, modern tones</h1>
-        <p className="holiday-hero__lead">Seasonal sips, modern tones.</p>
+       
       </header>
 
       <section className="holiday-grid">
